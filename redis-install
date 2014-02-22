@@ -14,5 +14,10 @@ sudo groupadd redis
 sudo useradd redis -g redis
 sudo cp init.d/redis-server /etc/init.d/
 
+sudo mkdir /usr/share/redis/
+sudo chown redis /usr/share/redis/
+
+sudo cp redis.conf /etc/
+
 sudo update-rc.d redis-server defaults
 sudo service redis-server start

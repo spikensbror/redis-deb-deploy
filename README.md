@@ -29,9 +29,8 @@ to your preferences.
 To install __Redis__ with the deployment scripts, simply run the `./redis-install` script.
 This will download, compile and install the latest stable version of __Redis__ as well as
 make __Redis__ start up on boot. It will also create the necessary `redis` user and group
-that the init.d script will run __Redis__ as.
-
-_Note: Installing does not create the configuration file at `/etc/redis.conf`_
+that the init.d script will run __Redis__ as. This also copies a default configuration to
+`/etc/redis.conf`.
 
 ### Uninstalling
 

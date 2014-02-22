@@ -4,5 +4,6 @@ sudo service redis-server stop
 sudo update-rc.d redis-server remove
 sudo groupdel redis
 sudo userdel redis
+sudo rm -rf /usr/share/redis/
 sudo rm -rf /usr/local/bin/redis*
 sudo rm -rf /etc/init.d/redis-server
