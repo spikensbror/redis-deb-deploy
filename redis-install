@@ -1,0 +1,18 @@
+#!/bin/bash
+
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvfz redis-stable.tar.gz
+
+cd redis-stable
+make
+sudo cp src/redis-server /usr/local/bin/
+sudo cp src/redis-cli /usr/local/bin/
+
+cd ..
+rm -rf redis-stable*
+sudo groupadd redis
+sudo useradd redis -g redis
+sudo cp init.d/redis-server /etc/init.d/
+
+sudo update-rc.d redis-server defaults
+sudo service redis-server start
